@@ -36,6 +36,9 @@ public class MusicOrganizer
             System.out.println("Invalid index");
         }
     }
+    public boolean validIndex(int index){
+        return index>= 0 && index < files.size();
+    }
     /**
      * Return the number of files in the collection.
      * @return The number of files in the collection.
