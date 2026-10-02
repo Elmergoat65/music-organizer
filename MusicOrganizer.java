@@ -32,12 +32,20 @@ public class MusicOrganizer
         files.add(filename);
     }
     public void checkIndex(int index){
-        if (index<0 || index >=files.size()) {
-            System.out.println("Invalid index");
+        if (index >= 0 && index < files.size()) {
+            
+        }
+        else {
+            System.out.println("Invalid index. Enter an index between 0 and " + (files.size() - 1));
         }
     }
     public boolean validIndex(int index){
-        return index>= 0 && index < files.size();
+        if (index >= 0 && index < files.size()) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
     /**
      * Return the number of files in the collection.
